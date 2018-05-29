@@ -76,12 +76,6 @@
     <Compile Include="FormNovoCliente.Designer.cs">
       <DependentUpon>FormNovoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNovoFatura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNovoFatura.Designer.cs">
-      <DependentUpon>FormNovoFatura.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormNovoRevisor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +104,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNovoCliente.resx">
       <DependentUpon>FormNovoCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNovoFatura.resx">
-      <DependentUpon>FormNovoFatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNovoRevisor.resx">
       <DependentUpon>FormNovoRevisor.cs</DependentUpon>

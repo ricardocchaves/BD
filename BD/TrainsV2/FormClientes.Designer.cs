@@ -30,8 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -96,7 +94,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxSaldoAtual = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxSearchHoraChegada = new System.Windows.Forms.TextBox();
@@ -111,30 +108,31 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxInfoCapacidade = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.textBoxInfoCapCarruagem = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.buttonComprarBilhete = new System.Windows.Forms.Button();
+            this.textBoxInfoCarruagens = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBoxInfoLugar = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.textBoxInfoCarruagem = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBoxInfoPreco = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBoxInfoLinha = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxInfoChegadaHora = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBoxInfoChegada = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.textBoxInfoPartidaHora = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.textBoxInfoPartida = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBoxInfoChegadaHora = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBoxInfoChegada = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.textBoxInfoLinha = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBoxInfoPreco = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.buttonComprarBilhete = new System.Windows.Forms.Button();
-            this.textBoxInfoCarruagem = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBoxInfoLugar = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.textBoxInfoCapCarruagem = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.textBoxInfoCarruagens = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.textBoxInfoCapacidade = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -155,8 +153,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.voltarToolStripMenuItem,
-            this.novoClienteToolStripMenuItem});
+            this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -169,21 +166,6 @@
             this.voltarToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.voltarToolStripMenuItem.Text = "< Voltar";
             this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
-            // 
-            // novoClienteToolStripMenuItem
-            // 
-            this.novoClienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.faturaToolStripMenuItem});
-            this.novoClienteToolStripMenuItem.Name = "novoClienteToolStripMenuItem";
-            this.novoClienteToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.novoClienteToolStripMenuItem.Text = "Novo";
-            // 
-            // faturaToolStripMenuItem
-            // 
-            this.faturaToolStripMenuItem.Name = "faturaToolStripMenuItem";
-            this.faturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.faturaToolStripMenuItem.Text = "Fatura";
-            this.faturaToolStripMenuItem.Click += new System.EventHandler(this.faturaToolStripMenuItem_Click);
             // 
             // tabPage3
             // 
@@ -800,16 +782,6 @@
             this.tabPage4.Text = "Horários e Compra de Bilhetes";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(288, 343);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(172, 24);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "toString() de cliente";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
@@ -965,6 +937,166 @@
             this.panel4.Size = new System.Drawing.Size(404, 223);
             this.panel4.TabIndex = 4;
             // 
+            // textBoxInfoCapacidade
+            // 
+            this.textBoxInfoCapacidade.Location = new System.Drawing.Point(329, 88);
+            this.textBoxInfoCapacidade.Name = "textBoxInfoCapacidade";
+            this.textBoxInfoCapacidade.ReadOnly = true;
+            this.textBoxInfoCapacidade.Size = new System.Drawing.Size(68, 20);
+            this.textBoxInfoCapacidade.TabIndex = 38;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(265, 91);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(64, 13);
+            this.label43.TabIndex = 37;
+            this.label43.Text = "Capacidade";
+            // 
+            // textBoxInfoCapCarruagem
+            // 
+            this.textBoxInfoCapCarruagem.Location = new System.Drawing.Point(268, 117);
+            this.textBoxInfoCapCarruagem.Name = "textBoxInfoCapCarruagem";
+            this.textBoxInfoCapCarruagem.ReadOnly = true;
+            this.textBoxInfoCapCarruagem.Size = new System.Drawing.Size(68, 20);
+            this.textBoxInfoCapCarruagem.TabIndex = 36;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(127, 120);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(135, 13);
+            this.label41.TabIndex = 35;
+            this.label41.Text = "Capacidade por carruagem";
+            // 
+            // buttonComprarBilhete
+            // 
+            this.buttonComprarBilhete.Location = new System.Drawing.Point(288, 165);
+            this.buttonComprarBilhete.Name = "buttonComprarBilhete";
+            this.buttonComprarBilhete.Size = new System.Drawing.Size(113, 55);
+            this.buttonComprarBilhete.TabIndex = 28;
+            this.buttonComprarBilhete.Text = "COMPRAR";
+            this.buttonComprarBilhete.UseVisualStyleBackColor = true;
+            // 
+            // textBoxInfoCarruagens
+            // 
+            this.textBoxInfoCarruagens.Location = new System.Drawing.Point(191, 88);
+            this.textBoxInfoCarruagens.Name = "textBoxInfoCarruagens";
+            this.textBoxInfoCarruagens.ReadOnly = true;
+            this.textBoxInfoCarruagens.Size = new System.Drawing.Size(68, 20);
+            this.textBoxInfoCarruagens.TabIndex = 34;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(127, 91);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(61, 13);
+            this.label42.TabIndex = 33;
+            this.label42.Text = "Carruagens";
+            // 
+            // textBoxInfoLugar
+            // 
+            this.textBoxInfoLugar.Location = new System.Drawing.Point(200, 156);
+            this.textBoxInfoLugar.Name = "textBoxInfoLugar";
+            this.textBoxInfoLugar.Size = new System.Drawing.Size(68, 20);
+            this.textBoxInfoLugar.TabIndex = 32;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(152, 159);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(34, 13);
+            this.label40.TabIndex = 31;
+            this.label40.Text = "Lugar";
+            // 
+            // textBoxInfoCarruagem
+            // 
+            this.textBoxInfoCarruagem.Location = new System.Drawing.Point(68, 156);
+            this.textBoxInfoCarruagem.Name = "textBoxInfoCarruagem";
+            this.textBoxInfoCarruagem.Size = new System.Drawing.Size(68, 20);
+            this.textBoxInfoCarruagem.TabIndex = 30;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(4, 159);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(58, 13);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "Carruagem";
+            // 
+            // textBoxInfoPreco
+            // 
+            this.textBoxInfoPreco.Location = new System.Drawing.Point(52, 117);
+            this.textBoxInfoPreco.Name = "textBoxInfoPreco";
+            this.textBoxInfoPreco.ReadOnly = true;
+            this.textBoxInfoPreco.Size = new System.Drawing.Size(68, 20);
+            this.textBoxInfoPreco.TabIndex = 27;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(4, 120);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(35, 13);
+            this.label22.TabIndex = 26;
+            this.label22.Text = "Preço";
+            // 
+            // textBoxInfoLinha
+            // 
+            this.textBoxInfoLinha.Location = new System.Drawing.Point(52, 88);
+            this.textBoxInfoLinha.Name = "textBoxInfoLinha";
+            this.textBoxInfoLinha.ReadOnly = true;
+            this.textBoxInfoLinha.Size = new System.Drawing.Size(68, 20);
+            this.textBoxInfoLinha.TabIndex = 25;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(4, 91);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(33, 13);
+            this.label21.TabIndex = 24;
+            this.label21.Text = "Linha";
+            // 
+            // textBoxInfoChegadaHora
+            // 
+            this.textBoxInfoChegadaHora.Location = new System.Drawing.Point(333, 53);
+            this.textBoxInfoChegadaHora.Name = "textBoxInfoChegadaHora";
+            this.textBoxInfoChegadaHora.ReadOnly = true;
+            this.textBoxInfoChegadaHora.Size = new System.Drawing.Size(68, 20);
+            this.textBoxInfoChegadaHora.TabIndex = 23;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(285, 56);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(30, 13);
+            this.label35.TabIndex = 22;
+            this.label35.Text = "Hora";
+            // 
+            // textBoxInfoChegada
+            // 
+            this.textBoxInfoChegada.Location = new System.Drawing.Point(115, 53);
+            this.textBoxInfoChegada.Name = "textBoxInfoChegada";
+            this.textBoxInfoChegada.ReadOnly = true;
+            this.textBoxInfoChegada.Size = new System.Drawing.Size(154, 20);
+            this.textBoxInfoChegada.TabIndex = 21;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(4, 57);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(107, 13);
+            this.label36.TabIndex = 20;
+            this.label36.Text = "Estação de Chegada";
+            // 
             // textBoxInfoPartidaHora
             // 
             this.textBoxInfoPartidaHora.Location = new System.Drawing.Point(333, 25);
@@ -1009,165 +1141,15 @@
             this.label39.TabIndex = 3;
             this.label39.Text = "Detalhes";
             // 
-            // textBoxInfoChegadaHora
+            // label12
             // 
-            this.textBoxInfoChegadaHora.Location = new System.Drawing.Point(333, 53);
-            this.textBoxInfoChegadaHora.Name = "textBoxInfoChegadaHora";
-            this.textBoxInfoChegadaHora.ReadOnly = true;
-            this.textBoxInfoChegadaHora.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoChegadaHora.TabIndex = 23;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(285, 56);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(30, 13);
-            this.label35.TabIndex = 22;
-            this.label35.Text = "Hora";
-            // 
-            // textBoxInfoChegada
-            // 
-            this.textBoxInfoChegada.Location = new System.Drawing.Point(115, 53);
-            this.textBoxInfoChegada.Name = "textBoxInfoChegada";
-            this.textBoxInfoChegada.ReadOnly = true;
-            this.textBoxInfoChegada.Size = new System.Drawing.Size(154, 20);
-            this.textBoxInfoChegada.TabIndex = 21;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(4, 57);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(107, 13);
-            this.label36.TabIndex = 20;
-            this.label36.Text = "Estação de Chegada";
-            // 
-            // textBoxInfoLinha
-            // 
-            this.textBoxInfoLinha.Location = new System.Drawing.Point(52, 88);
-            this.textBoxInfoLinha.Name = "textBoxInfoLinha";
-            this.textBoxInfoLinha.ReadOnly = true;
-            this.textBoxInfoLinha.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoLinha.TabIndex = 25;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(4, 91);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(33, 13);
-            this.label21.TabIndex = 24;
-            this.label21.Text = "Linha";
-            // 
-            // textBoxInfoPreco
-            // 
-            this.textBoxInfoPreco.Location = new System.Drawing.Point(52, 117);
-            this.textBoxInfoPreco.Name = "textBoxInfoPreco";
-            this.textBoxInfoPreco.ReadOnly = true;
-            this.textBoxInfoPreco.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoPreco.TabIndex = 27;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(4, 120);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(35, 13);
-            this.label22.TabIndex = 26;
-            this.label22.Text = "Preço";
-            // 
-            // buttonComprarBilhete
-            // 
-            this.buttonComprarBilhete.Location = new System.Drawing.Point(288, 165);
-            this.buttonComprarBilhete.Name = "buttonComprarBilhete";
-            this.buttonComprarBilhete.Size = new System.Drawing.Size(113, 55);
-            this.buttonComprarBilhete.TabIndex = 28;
-            this.buttonComprarBilhete.Text = "COMPRAR";
-            this.buttonComprarBilhete.UseVisualStyleBackColor = true;
-            // 
-            // textBoxInfoCarruagem
-            // 
-            this.textBoxInfoCarruagem.Location = new System.Drawing.Point(68, 156);
-            this.textBoxInfoCarruagem.Name = "textBoxInfoCarruagem";
-            this.textBoxInfoCarruagem.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoCarruagem.TabIndex = 30;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(4, 159);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(58, 13);
-            this.label23.TabIndex = 29;
-            this.label23.Text = "Carruagem";
-            // 
-            // textBoxInfoLugar
-            // 
-            this.textBoxInfoLugar.Location = new System.Drawing.Point(200, 156);
-            this.textBoxInfoLugar.Name = "textBoxInfoLugar";
-            this.textBoxInfoLugar.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoLugar.TabIndex = 32;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(152, 159);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(34, 13);
-            this.label40.TabIndex = 31;
-            this.label40.Text = "Lugar";
-            // 
-            // textBoxInfoCapCarruagem
-            // 
-            this.textBoxInfoCapCarruagem.Location = new System.Drawing.Point(268, 117);
-            this.textBoxInfoCapCarruagem.Name = "textBoxInfoCapCarruagem";
-            this.textBoxInfoCapCarruagem.ReadOnly = true;
-            this.textBoxInfoCapCarruagem.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoCapCarruagem.TabIndex = 36;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(127, 120);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(135, 13);
-            this.label41.TabIndex = 35;
-            this.label41.Text = "Capacidade por carruagem";
-            // 
-            // textBoxInfoCarruagens
-            // 
-            this.textBoxInfoCarruagens.Location = new System.Drawing.Point(191, 88);
-            this.textBoxInfoCarruagens.Name = "textBoxInfoCarruagens";
-            this.textBoxInfoCarruagens.ReadOnly = true;
-            this.textBoxInfoCarruagens.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoCarruagens.TabIndex = 34;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(127, 91);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(61, 13);
-            this.label42.TabIndex = 33;
-            this.label42.Text = "Carruagens";
-            // 
-            // textBoxInfoCapacidade
-            // 
-            this.textBoxInfoCapacidade.Location = new System.Drawing.Point(329, 88);
-            this.textBoxInfoCapacidade.Name = "textBoxInfoCapacidade";
-            this.textBoxInfoCapacidade.ReadOnly = true;
-            this.textBoxInfoCapacidade.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoCapacidade.TabIndex = 38;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(265, 91);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(64, 13);
-            this.label43.TabIndex = 37;
-            this.label43.Text = "Capacidade";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(288, 343);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(172, 24);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "toString() de cliente";
             // 
             // FormClientes
             // 
@@ -1212,8 +1194,6 @@
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novoClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem faturaToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;

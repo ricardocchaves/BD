@@ -33,11 +33,5 @@ namespace TrainsV2
             f.Show();
         }
 
-        private void faturaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormNovoFatura f = new FormNovoFatura();
-            f.Show();
-        }
-
     }
 }
