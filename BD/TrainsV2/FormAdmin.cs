@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TrainsV2
 {
-    public partial class FormComboios : Form
+    public partial class FormAdmin : Form
     {
-        public FormComboios()
+        public FormAdmin()
         {
             InitializeComponent();
         }
@@ -20,6 +20,12 @@ namespace TrainsV2
         private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void revisorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNovoRevisor f = new FormNovoRevisor();
+            f.Show();
         }
     }
 }

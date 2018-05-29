@@ -27,29 +27,9 @@ namespace TrainsV2
             this.Hide();
         }
 
-        private void buttonRevisores_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            var frm = new FormRevisores();
-            frm.Location = this.Location;
-            frm.StartPosition = FormStartPosition.Manual;
-            frm.FormClosing += delegate { this.Show(); };
-            frm.Show();
-            this.Hide();
-        }
-
-        private void buttonComboios_Click(object sender, EventArgs e)
-        {
-            var frm = new FormComboios();
-            frm.Location = this.Location;
-            frm.StartPosition = FormStartPosition.Manual;
-            frm.FormClosing += delegate { this.Show(); };
-            frm.Show();
-            this.Hide();
-        }
-
-        private void buttonHorarios_Click(object sender, EventArgs e)
-        {
-            var frm = new FormHorarios();
+            var frm = new FormAdmin();
             frm.Location = this.Location;
             frm.StartPosition = FormStartPosition.Manual;
             frm.FormClosing += delegate { this.Show(); };
