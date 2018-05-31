@@ -33,8 +33,9 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.buttonResetDateBilhete = new System.Windows.Forms.Button();
             this.dateTimePickerBilhetes = new System.Windows.Forms.DateTimePicker();
-            this.button10 = new System.Windows.Forms.Button();
+            this.buttonSearchBilhetes = new System.Windows.Forms.Button();
             this.textBoxSearchChegada = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.listBoxBilhetes = new System.Windows.Forms.ListBox();
@@ -65,11 +66,14 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.buttonResetDate = new System.Windows.Forms.Button();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.textBoxSearchFaturaMin = new System.Windows.Forms.TextBox();
             this.dateTimePickerFatura = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxFaturaValor = new System.Windows.Forms.ComboBox();
             this.listBoxFaturas = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBoxSearchFaturaValor = new System.Windows.Forms.TextBox();
+            this.buttonSearchFaturas = new System.Windows.Forms.Button();
+            this.textBoxSearchFaturaMax = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -97,7 +101,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxSearchHoraChegada = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonSearchHorarios = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.textBoxSearchHoraPartida = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -132,7 +136,7 @@
             this.textBoxInfoPartida = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.labelClienteEscolhido = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -188,8 +192,9 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.buttonResetDateBilhete);
             this.panel8.Controls.Add(this.dateTimePickerBilhetes);
-            this.panel8.Controls.Add(this.button10);
+            this.panel8.Controls.Add(this.buttonSearchBilhetes);
             this.panel8.Controls.Add(this.textBoxSearchChegada);
             this.panel8.Controls.Add(this.label28);
             this.panel8.Controls.Add(this.listBoxBilhetes);
@@ -202,21 +207,34 @@
             this.panel8.Size = new System.Drawing.Size(349, 272);
             this.panel8.TabIndex = 3;
             // 
+            // buttonResetDateBilhete
+            // 
+            this.buttonResetDateBilhete.Location = new System.Drawing.Point(270, 22);
+            this.buttonResetDateBilhete.Name = "buttonResetDateBilhete";
+            this.buttonResetDateBilhete.Size = new System.Drawing.Size(75, 23);
+            this.buttonResetDateBilhete.TabIndex = 14;
+            this.buttonResetDateBilhete.Text = "RESET";
+            this.buttonResetDateBilhete.UseVisualStyleBackColor = true;
+            this.buttonResetDateBilhete.Click += new System.EventHandler(this.buttonResetDate_Click);
+            // 
             // dateTimePickerBilhetes
             // 
+            this.dateTimePickerBilhetes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerBilhetes.Location = new System.Drawing.Point(68, 23);
             this.dateTimePickerBilhetes.Name = "dateTimePickerBilhetes";
             this.dateTimePickerBilhetes.Size = new System.Drawing.Size(196, 20);
             this.dateTimePickerBilhetes.TabIndex = 13;
+            this.dateTimePickerBilhetes.ValueChanged += new System.EventHandler(this.dateTimePickerBilhete_ValueChanged);
             // 
-            // button10
+            // buttonSearchBilhetes
             // 
-            this.button10.Location = new System.Drawing.Point(270, 80);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "SEARCH";
-            this.button10.UseVisualStyleBackColor = true;
+            this.buttonSearchBilhetes.Location = new System.Drawing.Point(270, 80);
+            this.buttonSearchBilhetes.Name = "buttonSearchBilhetes";
+            this.buttonSearchBilhetes.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchBilhetes.TabIndex = 12;
+            this.buttonSearchBilhetes.Text = "SEARCH";
+            this.buttonSearchBilhetes.UseVisualStyleBackColor = true;
+            this.buttonSearchBilhetes.Click += new System.EventHandler(this.loadBilhetes);
             // 
             // textBoxSearchChegada
             // 
@@ -242,6 +260,7 @@
             this.listBoxBilhetes.Name = "listBoxBilhetes";
             this.listBoxBilhetes.Size = new System.Drawing.Size(338, 147);
             this.listBoxBilhetes.TabIndex = 9;
+            this.listBoxBilhetes.SelectedIndexChanged += new System.EventHandler(this.listBoxBilhetes_SelectedIndexChanged);
             // 
             // textBoxSearchPartida
             // 
@@ -491,11 +510,14 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.buttonResetDate);
+            this.panel5.Controls.Add(this.label45);
+            this.panel5.Controls.Add(this.label44);
+            this.panel5.Controls.Add(this.textBoxSearchFaturaMin);
             this.panel5.Controls.Add(this.dateTimePickerFatura);
-            this.panel5.Controls.Add(this.comboBoxFaturaValor);
             this.panel5.Controls.Add(this.listBoxFaturas);
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.textBoxSearchFaturaValor);
+            this.panel5.Controls.Add(this.buttonSearchFaturas);
+            this.panel5.Controls.Add(this.textBoxSearchFaturaMax);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label3);
@@ -504,54 +526,83 @@
             this.panel5.Size = new System.Drawing.Size(349, 269);
             this.panel5.TabIndex = 3;
             // 
+            // buttonResetDate
+            // 
+            this.buttonResetDate.Location = new System.Drawing.Point(270, 21);
+            this.buttonResetDate.Name = "buttonResetDate";
+            this.buttonResetDate.Size = new System.Drawing.Size(75, 23);
+            this.buttonResetDate.TabIndex = 18;
+            this.buttonResetDate.Text = "RESET";
+            this.buttonResetDate.UseVisualStyleBackColor = true;
+            this.buttonResetDate.Click += new System.EventHandler(this.buttonResetDate_Click);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(168, 72);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(26, 13);
+            this.label45.TabIndex = 17;
+            this.label45.Text = "max";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(61, 71);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(23, 13);
+            this.label44.TabIndex = 16;
+            this.label44.Text = "min";
+            // 
+            // textBoxSearchFaturaMin
+            // 
+            this.textBoxSearchFaturaMin.Location = new System.Drawing.Point(61, 49);
+            this.textBoxSearchFaturaMin.Name = "textBoxSearchFaturaMin";
+            this.textBoxSearchFaturaMin.Size = new System.Drawing.Size(93, 20);
+            this.textBoxSearchFaturaMin.TabIndex = 15;
+            // 
             // dateTimePickerFatura
             // 
+            this.dateTimePickerFatura.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerFatura.Location = new System.Drawing.Point(61, 23);
             this.dateTimePickerFatura.Name = "dateTimePickerFatura";
             this.dateTimePickerFatura.Size = new System.Drawing.Size(203, 20);
             this.dateTimePickerFatura.TabIndex = 14;
-            // 
-            // comboBoxFaturaValor
-            // 
-            this.comboBoxFaturaValor.FormattingEnabled = true;
-            this.comboBoxFaturaValor.Items.AddRange(new object[] {
-            "MAIOR QUE",
-            "MENOR QUE",
-            "IGUAL A"});
-            this.comboBoxFaturaValor.Location = new System.Drawing.Point(61, 53);
-            this.comboBoxFaturaValor.Name = "comboBoxFaturaValor";
-            this.comboBoxFaturaValor.Size = new System.Drawing.Size(85, 21);
-            this.comboBoxFaturaValor.TabIndex = 10;
+            this.dateTimePickerFatura.ValueChanged += new System.EventHandler(this.dateTimePickerFatura_ValueChanged);
             // 
             // listBoxFaturas
             // 
             this.listBoxFaturas.FormattingEnabled = true;
+            this.listBoxFaturas.Items.AddRange(new object[] {
+            "Sem faturas a apresentar"});
             this.listBoxFaturas.Location = new System.Drawing.Point(7, 90);
             this.listBoxFaturas.Name = "listBoxFaturas";
             this.listBoxFaturas.Size = new System.Drawing.Size(338, 173);
             this.listBoxFaturas.TabIndex = 9;
+            this.listBoxFaturas.SelectedIndexChanged += new System.EventHandler(this.listBoxFaturas_SelectedIndexChanged);
             // 
-            // button3
+            // buttonSearchFaturas
             // 
-            this.button3.Location = new System.Drawing.Point(271, 53);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "SEARCH";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonSearchFaturas.Location = new System.Drawing.Point(271, 47);
+            this.buttonSearchFaturas.Name = "buttonSearchFaturas";
+            this.buttonSearchFaturas.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchFaturas.TabIndex = 8;
+            this.buttonSearchFaturas.Text = "SEARCH";
+            this.buttonSearchFaturas.UseVisualStyleBackColor = true;
+            this.buttonSearchFaturas.Click += new System.EventHandler(this.loadFaturas);
             // 
-            // textBoxSearchFaturaValor
+            // textBoxSearchFaturaMax
             // 
-            this.textBoxSearchFaturaValor.Location = new System.Drawing.Point(152, 55);
-            this.textBoxSearchFaturaValor.Name = "textBoxSearchFaturaValor";
-            this.textBoxSearchFaturaValor.Size = new System.Drawing.Size(112, 20);
-            this.textBoxSearchFaturaValor.TabIndex = 7;
+            this.textBoxSearchFaturaMax.Location = new System.Drawing.Point(171, 49);
+            this.textBoxSearchFaturaMax.Name = "textBoxSearchFaturaMax";
+            this.textBoxSearchFaturaMax.Size = new System.Drawing.Size(93, 20);
+            this.textBoxSearchFaturaMax.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 53);
+            this.label1.Location = new System.Drawing.Point(3, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 6;
@@ -682,6 +733,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(784, 313);
             this.tabControl1.TabIndex = 6;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
             // 
             // tabPage1
             // 
@@ -709,6 +761,7 @@
             this.buttonAdicionarSaldo.TabIndex = 23;
             this.buttonAdicionarSaldo.Text = "ADICIONAR";
             this.buttonAdicionarSaldo.UseVisualStyleBackColor = true;
+            this.buttonAdicionarSaldo.Click += new System.EventHandler(this.addSaldo);
             // 
             // buttonCalcSaldo
             // 
@@ -718,6 +771,7 @@
             this.buttonCalcSaldo.TabIndex = 22;
             this.buttonCalcSaldo.Text = "CALCULAR NOVO SALDO";
             this.buttonCalcSaldo.UseVisualStyleBackColor = true;
+            this.buttonCalcSaldo.Click += new System.EventHandler(this.calcSaldo);
             // 
             // label13
             // 
@@ -794,7 +848,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.textBoxSearchHoraChegada);
-            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.buttonSearchHorarios);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.textBoxSearchHoraPartida);
             this.panel3.Controls.Add(this.label17);
@@ -816,14 +870,14 @@
             this.textBoxSearchHoraChegada.Size = new System.Drawing.Size(180, 20);
             this.textBoxSearchHoraChegada.TabIndex = 17;
             // 
-            // button5
+            // buttonSearchHorarios
             // 
-            this.button5.Location = new System.Drawing.Point(271, 109);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "SEARCH";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonSearchHorarios.Location = new System.Drawing.Point(271, 109);
+            this.buttonSearchHorarios.Name = "buttonSearchHorarios";
+            this.buttonSearchHorarios.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchHorarios.TabIndex = 16;
+            this.buttonSearchHorarios.Text = "SEARCH";
+            this.buttonSearchHorarios.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
@@ -1141,22 +1195,22 @@
             this.label39.TabIndex = 3;
             this.label39.Text = "Detalhes";
             // 
-            // label12
+            // labelClienteEscolhido
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(288, 343);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(172, 24);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "toString() de cliente";
+            this.labelClienteEscolhido.AutoSize = true;
+            this.labelClienteEscolhido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClienteEscolhido.Location = new System.Drawing.Point(288, 343);
+            this.labelClienteEscolhido.Name = "labelClienteEscolhido";
+            this.labelClienteEscolhido.Size = new System.Drawing.Size(172, 24);
+            this.labelClienteEscolhido.TabIndex = 7;
+            this.labelClienteEscolhido.Text = "toString() de cliente";
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 378);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.labelClienteEscolhido);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -1198,7 +1252,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DateTimePicker dateTimePickerBilhetes;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button buttonSearchBilhetes;
         private System.Windows.Forms.TextBox textBoxSearchChegada;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ListBox listBoxBilhetes;
@@ -1230,10 +1284,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DateTimePicker dateTimePickerFatura;
-        private System.Windows.Forms.ComboBox comboBoxFaturaValor;
         private System.Windows.Forms.ListBox listBoxFaturas;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBoxSearchFaturaValor;
+        private System.Windows.Forms.Button buttonSearchFaturas;
+        private System.Windows.Forms.TextBox textBoxSearchFaturaMax;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -1249,7 +1302,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelClienteEscolhido;
         private System.Windows.Forms.Button buttonAdicionarSaldo;
         private System.Windows.Forms.Button buttonCalcSaldo;
         private System.Windows.Forms.Label label13;
@@ -1262,7 +1315,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBoxSearchHoraChegada;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonSearchHorarios;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBoxSearchHoraPartida;
         private System.Windows.Forms.Label label17;
@@ -1297,6 +1350,11 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox textBoxInfoCarruagens;
         private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox textBoxSearchFaturaMin;
+        private System.Windows.Forms.Button buttonResetDate;
+        private System.Windows.Forms.Button buttonResetDateBilhete;
     }
 }
 

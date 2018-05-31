@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.boxNome = new System.Windows.Forms.TextBox();
+            this.boxApelido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboGenero = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.boxCC = new System.Windows.Forms.TextBox();
+            this.boxNIF = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.boxTel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.boxEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.boxUserID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.boxCartaoCredito = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.boxPass1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.boxPass2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label26
@@ -62,19 +62,19 @@
             this.label26.TabIndex = 7;
             this.label26.Text = "Nome próprio";
             // 
-            // textBox1
+            // boxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 20);
-            this.textBox1.TabIndex = 8;
+            this.boxNome.Location = new System.Drawing.Point(89, 9);
+            this.boxNome.Name = "boxNome";
+            this.boxNome.Size = new System.Drawing.Size(190, 20);
+            this.boxNome.TabIndex = 8;
             // 
-            // textBox2
+            // boxApelido
             // 
-            this.textBox2.Location = new System.Drawing.Point(89, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 20);
-            this.textBox2.TabIndex = 10;
+            this.boxApelido.Location = new System.Drawing.Point(89, 39);
+            this.boxApelido.Name = "boxApelido";
+            this.boxApelido.Size = new System.Drawing.Size(190, 20);
+            this.boxApelido.TabIndex = 10;
             // 
             // label1
             // 
@@ -94,16 +94,16 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Genero";
             // 
-            // comboBox1
+            // comboGenero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Masculino",
-            "Feminino"});
-            this.comboBox1.Location = new System.Drawing.Point(61, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(56, 21);
-            this.comboBox1.TabIndex = 12;
+            this.comboGenero.FormattingEnabled = true;
+            this.comboGenero.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.comboGenero.Location = new System.Drawing.Point(61, 69);
+            this.comboGenero.Name = "comboGenero";
+            this.comboGenero.Size = new System.Drawing.Size(56, 21);
+            this.comboGenero.TabIndex = 12;
             // 
             // label3
             // 
@@ -114,19 +114,19 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "CC";
             // 
-            // textBox3
+            // boxCC
             // 
-            this.textBox3.Location = new System.Drawing.Point(162, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(117, 20);
-            this.textBox3.TabIndex = 14;
+            this.boxCC.Location = new System.Drawing.Point(162, 70);
+            this.boxCC.Name = "boxCC";
+            this.boxCC.Size = new System.Drawing.Size(117, 20);
+            this.boxCC.TabIndex = 14;
             // 
-            // textBox4
+            // boxNIF
             // 
-            this.textBox4.Location = new System.Drawing.Point(42, 108);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(95, 20);
-            this.textBox4.TabIndex = 16;
+            this.boxNIF.Location = new System.Drawing.Point(42, 108);
+            this.boxNIF.Name = "boxNIF";
+            this.boxNIF.Size = new System.Drawing.Size(95, 20);
+            this.boxNIF.TabIndex = 16;
             // 
             // label4
             // 
@@ -137,12 +137,12 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "NIF";
             // 
-            // textBox5
+            // boxTel
             // 
-            this.textBox5.Location = new System.Drawing.Point(171, 108);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(108, 20);
-            this.textBox5.TabIndex = 18;
+            this.boxTel.Location = new System.Drawing.Point(171, 108);
+            this.boxTel.Name = "boxTel";
+            this.boxTel.Size = new System.Drawing.Size(108, 20);
+            this.boxTel.TabIndex = 18;
             // 
             // label5
             // 
@@ -153,12 +153,12 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Tel";
             // 
-            // textBox6
+            // boxEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(61, 143);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(218, 20);
-            this.textBox6.TabIndex = 20;
+            this.boxEmail.Location = new System.Drawing.Point(61, 143);
+            this.boxEmail.Name = "boxEmail";
+            this.boxEmail.Size = new System.Drawing.Size(218, 20);
+            this.boxEmail.TabIndex = 20;
             // 
             // label6
             // 
@@ -169,12 +169,12 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Email";
             // 
-            // textBox7
+            // boxUserID
             // 
-            this.textBox7.Location = new System.Drawing.Point(61, 176);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(218, 20);
-            this.textBox7.TabIndex = 22;
+            this.boxUserID.Location = new System.Drawing.Point(61, 176);
+            this.boxUserID.Name = "boxUserID";
+            this.boxUserID.Size = new System.Drawing.Size(218, 20);
+            this.boxUserID.TabIndex = 22;
             // 
             // label7
             // 
@@ -185,12 +185,12 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "userID";
             // 
-            // textBox8
+            // boxCartaoCredito
             // 
-            this.textBox8.Location = new System.Drawing.Point(107, 209);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(172, 20);
-            this.textBox8.TabIndex = 24;
+            this.boxCartaoCredito.Location = new System.Drawing.Point(107, 209);
+            this.boxCartaoCredito.Name = "boxCartaoCredito";
+            this.boxCartaoCredito.Size = new System.Drawing.Size(172, 20);
+            this.boxCartaoCredito.TabIndex = 24;
             // 
             // label8
             // 
@@ -201,13 +201,13 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "Cartão de Crédito";
             // 
-            // textBox9
+            // boxPass1
             // 
-            this.textBox9.Location = new System.Drawing.Point(107, 252);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(172, 20);
-            this.textBox9.TabIndex = 26;
-            this.textBox9.UseSystemPasswordChar = true;
+            this.boxPass1.Location = new System.Drawing.Point(107, 252);
+            this.boxPass1.Name = "boxPass1";
+            this.boxPass1.Size = new System.Drawing.Size(172, 20);
+            this.boxPass1.TabIndex = 26;
+            this.boxPass1.UseSystemPasswordChar = true;
             // 
             // label9
             // 
@@ -218,13 +218,13 @@
             this.label9.TabIndex = 25;
             this.label9.Text = "Password";
             // 
-            // textBox10
+            // boxPass2
             // 
-            this.textBox10.Location = new System.Drawing.Point(107, 285);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(172, 20);
-            this.textBox10.TabIndex = 28;
-            this.textBox10.UseSystemPasswordChar = true;
+            this.boxPass2.Location = new System.Drawing.Point(107, 285);
+            this.boxPass2.Name = "boxPass2";
+            this.boxPass2.Size = new System.Drawing.Size(172, 20);
+            this.boxPass2.TabIndex = 28;
+            this.boxPass2.UseSystemPasswordChar = true;
             // 
             // label10
             // 
@@ -235,42 +235,43 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "Confirmar Password";
             // 
-            // button1
+            // buttonAddCliente
             // 
-            this.button1.Location = new System.Drawing.Point(77, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 41);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "ADICIONAR CLIENTE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddCliente.Location = new System.Drawing.Point(77, 326);
+            this.buttonAddCliente.Name = "buttonAddCliente";
+            this.buttonAddCliente.Size = new System.Drawing.Size(143, 41);
+            this.buttonAddCliente.TabIndex = 29;
+            this.buttonAddCliente.Text = "ADICIONAR CLIENTE";
+            this.buttonAddCliente.UseVisualStyleBackColor = true;
+            this.buttonAddCliente.Click += new System.EventHandler(this.addCliente);
             // 
             // FormNovoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(303, 379);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.buttonAddCliente);
+            this.Controls.Add(this.boxPass2);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.boxPass1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.boxCartaoCredito);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.boxUserID);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.boxEmail);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.boxTel);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.boxNIF);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.boxCC);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboGenero);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.boxApelido);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.boxNome);
             this.Controls.Add(this.label26);
             this.Name = "FormNovoCliente";
             this.Text = "Novo Cliente";
@@ -282,27 +283,27 @@
         #endregion
 
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox boxNome;
+        private System.Windows.Forms.TextBox boxApelido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboGenero;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox boxCC;
+        private System.Windows.Forms.TextBox boxNIF;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox boxTel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox boxEmail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox boxUserID;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox boxCartaoCredito;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox boxPass1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox boxPass2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddCliente;
     }
 }

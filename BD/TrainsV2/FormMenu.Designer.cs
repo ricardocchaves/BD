@@ -63,6 +63,7 @@
             this.Controls.Add(this.buttonClientes);
             this.Name = "FormMenu";
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             this.ResumeLayout(false);
 
         }

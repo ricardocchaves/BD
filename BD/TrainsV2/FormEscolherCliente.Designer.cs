@@ -95,6 +95,7 @@
             this.listBoxClientes.Name = "listBoxClientes";
             this.listBoxClientes.Size = new System.Drawing.Size(338, 147);
             this.listBoxClientes.TabIndex = 9;
+            this.listBoxClientes.SelectedIndexChanged += new System.EventHandler(this.listBoxClientes_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -104,6 +105,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "SEARCH";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.loadClientesCC);
             // 
             // textBoxSearchCcc
             // 
@@ -111,6 +113,7 @@
             this.textBoxSearchCcc.Name = "textBoxSearchCcc";
             this.textBoxSearchCcc.Size = new System.Drawing.Size(203, 20);
             this.textBoxSearchCcc.TabIndex = 7;
+            this.textBoxSearchCcc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxSearchCcc_KeyUp);
             // 
             // label12
             // 
@@ -130,6 +133,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "SEARCH";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.loadClientesNome);
             // 
             // textBoxSearchCnome
             // 
@@ -137,6 +141,7 @@
             this.textBoxSearchCnome.Name = "textBoxSearchCnome";
             this.textBoxSearchCnome.Size = new System.Drawing.Size(203, 20);
             this.textBoxSearchCnome.TabIndex = 4;
+            this.textBoxSearchCnome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxSearchCnome_KeyUp);
             // 
             // label13
             // 
@@ -354,6 +359,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "FormEscolherCliente";
             this.Text = "Escolher Cliente";
+            this.Load += new System.EventHandler(this.FormEscolherCliente_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

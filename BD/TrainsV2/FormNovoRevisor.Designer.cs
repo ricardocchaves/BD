@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.boxCC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxGenero = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.boxApelido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.boxNome = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.boxEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.boxTelefone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.boxSalario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox3
+            // boxCC
             // 
-            this.textBox3.Location = new System.Drawing.Point(162, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(117, 20);
-            this.textBox3.TabIndex = 22;
+            this.boxCC.Location = new System.Drawing.Point(162, 70);
+            this.boxCC.Name = "boxCC";
+            this.boxCC.Size = new System.Drawing.Size(117, 20);
+            this.boxCC.TabIndex = 22;
             // 
             // label3
             // 
@@ -61,16 +61,16 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "CC";
             // 
-            // comboBox1
+            // comboBoxGenero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Masculino",
-            "Feminino"});
-            this.comboBox1.Location = new System.Drawing.Point(60, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(56, 21);
-            this.comboBox1.TabIndex = 20;
+            this.comboBoxGenero.FormattingEnabled = true;
+            this.comboBoxGenero.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.comboBoxGenero.Location = new System.Drawing.Point(60, 69);
+            this.comboBoxGenero.Name = "comboBoxGenero";
+            this.comboBoxGenero.Size = new System.Drawing.Size(56, 21);
+            this.comboBoxGenero.TabIndex = 20;
             // 
             // label2
             // 
@@ -81,12 +81,12 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Genero";
             // 
-            // textBox2
+            // boxApelido
             // 
-            this.textBox2.Location = new System.Drawing.Point(89, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 20);
-            this.textBox2.TabIndex = 18;
+            this.boxApelido.Location = new System.Drawing.Point(89, 39);
+            this.boxApelido.Name = "boxApelido";
+            this.boxApelido.Size = new System.Drawing.Size(190, 20);
+            this.boxApelido.TabIndex = 18;
             // 
             // label1
             // 
@@ -97,12 +97,12 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Apelido";
             // 
-            // textBox1
+            // boxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 20);
-            this.textBox1.TabIndex = 16;
+            this.boxNome.Location = new System.Drawing.Point(89, 9);
+            this.boxNome.Name = "boxNome";
+            this.boxNome.Size = new System.Drawing.Size(190, 20);
+            this.boxNome.TabIndex = 16;
             // 
             // label26
             // 
@@ -113,12 +113,12 @@
             this.label26.TabIndex = 15;
             this.label26.Text = "Nome próprio";
             // 
-            // textBox4
+            // boxEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(89, 102);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 20);
-            this.textBox4.TabIndex = 24;
+            this.boxEmail.Location = new System.Drawing.Point(89, 102);
+            this.boxEmail.Name = "boxEmail";
+            this.boxEmail.Size = new System.Drawing.Size(190, 20);
+            this.boxEmail.TabIndex = 24;
             // 
             // label4
             // 
@@ -129,12 +129,12 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Email";
             // 
-            // textBox5
+            // boxTelefone
             // 
-            this.textBox5.Location = new System.Drawing.Point(90, 138);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(190, 20);
-            this.textBox5.TabIndex = 26;
+            this.boxTelefone.Location = new System.Drawing.Point(90, 138);
+            this.boxTelefone.Name = "boxTelefone";
+            this.boxTelefone.Size = new System.Drawing.Size(190, 20);
+            this.boxTelefone.TabIndex = 26;
             // 
             // label5
             // 
@@ -145,12 +145,12 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Telefone";
             // 
-            // textBox6
+            // boxSalario
             // 
-            this.textBox6.Location = new System.Drawing.Point(90, 173);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 20);
-            this.textBox6.TabIndex = 28;
+            this.boxSalario.Location = new System.Drawing.Point(90, 173);
+            this.boxSalario.Name = "boxSalario";
+            this.boxSalario.Size = new System.Drawing.Size(190, 20);
+            this.boxSalario.TabIndex = 28;
             // 
             // label6
             // 
@@ -169,6 +169,7 @@
             this.button1.TabIndex = 29;
             this.button1.Text = "ADICIONAR REVISOR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.addRevisor);
             // 
             // FormNovoRevisor
             // 
@@ -176,19 +177,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 287);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.boxSalario);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.boxTelefone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.boxEmail);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.boxCC);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxGenero);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.boxApelido);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.boxNome);
             this.Controls.Add(this.label26);
             this.Name = "FormNovoRevisor";
             this.Text = "Novo Revisor";
@@ -199,19 +200,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox boxCC;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxGenero;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox boxApelido;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox boxNome;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox boxEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox boxTelefone;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox boxSalario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
     }

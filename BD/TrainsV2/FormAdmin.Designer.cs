@@ -51,11 +51,13 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.textBoxSearchRevisorMin = new System.Windows.Forms.TextBox();
+            this.textBoxSearchRevisorMax = new System.Windows.Forms.TextBox();
             this.textBoxSearchRevisorCC = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxRevisorSalario = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBoxSearchRevisorSalario = new System.Windows.Forms.TextBox();
+            this.buttonSearchRevisor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.listBoxRevisores = new System.Windows.Forms.ListBox();
             this.textBoxSearchRevisorNome = new System.Windows.Forms.TextBox();
@@ -75,7 +77,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxSearchCombTipo = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonSearchComboio = new System.Windows.Forms.Button();
             this.textBoxSearchCombID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.listBoxComboios = new System.Windows.Forms.ListBox();
@@ -136,6 +138,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(784, 313);
             this.tabControl1.TabIndex = 7;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -186,6 +189,7 @@
             this.buttonApagarRevisor.TabIndex = 18;
             this.buttonApagarRevisor.Text = "ELIMINAR REVISOR";
             this.buttonApagarRevisor.UseVisualStyleBackColor = true;
+            this.buttonApagarRevisor.Click += new System.EventHandler(this.apagarRevisor);
             // 
             // textBoxRevisorSalario
             // 
@@ -301,11 +305,13 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.label45);
+            this.panel8.Controls.Add(this.label44);
+            this.panel8.Controls.Add(this.textBoxSearchRevisorMin);
+            this.panel8.Controls.Add(this.textBoxSearchRevisorMax);
             this.panel8.Controls.Add(this.textBoxSearchRevisorCC);
             this.panel8.Controls.Add(this.label2);
-            this.panel8.Controls.Add(this.comboBoxRevisorSalario);
-            this.panel8.Controls.Add(this.button3);
-            this.panel8.Controls.Add(this.textBoxSearchRevisorSalario);
+            this.panel8.Controls.Add(this.buttonSearchRevisor);
             this.panel8.Controls.Add(this.label1);
             this.panel8.Controls.Add(this.listBoxRevisores);
             this.panel8.Controls.Add(this.textBoxSearchRevisorNome);
@@ -315,6 +321,38 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(349, 240);
             this.panel8.TabIndex = 3;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(175, 101);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(26, 13);
+            this.label45.TabIndex = 24;
+            this.label45.Text = "max";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(66, 100);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(23, 13);
+            this.label44.TabIndex = 23;
+            this.label44.Text = "min";
+            // 
+            // textBoxSearchRevisorMin
+            // 
+            this.textBoxSearchRevisorMin.Location = new System.Drawing.Point(67, 79);
+            this.textBoxSearchRevisorMin.Name = "textBoxSearchRevisorMin";
+            this.textBoxSearchRevisorMin.Size = new System.Drawing.Size(93, 20);
+            this.textBoxSearchRevisorMin.TabIndex = 22;
+            // 
+            // textBoxSearchRevisorMax
+            // 
+            this.textBoxSearchRevisorMax.Location = new System.Drawing.Point(177, 79);
+            this.textBoxSearchRevisorMax.Name = "textBoxSearchRevisorMax";
+            this.textBoxSearchRevisorMax.Size = new System.Drawing.Size(93, 20);
+            this.textBoxSearchRevisorMax.TabIndex = 21;
             // 
             // textBoxSearchRevisorCC
             // 
@@ -333,39 +371,21 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "CC";
             // 
-            // comboBoxRevisorSalario
+            // buttonSearchRevisor
             // 
-            this.comboBoxRevisorSalario.FormattingEnabled = true;
-            this.comboBoxRevisorSalario.Items.AddRange(new object[] {
-            "MAIOR QUE",
-            "MENOR QUE",
-            "IGUAL A"});
-            this.comboBoxRevisorSalario.Location = new System.Drawing.Point(68, 89);
-            this.comboBoxRevisorSalario.Name = "comboBoxRevisorSalario";
-            this.comboBoxRevisorSalario.Size = new System.Drawing.Size(78, 21);
-            this.comboBoxRevisorSalario.TabIndex = 18;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(270, 87);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "SEARCH";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBoxSearchRevisorSalario
-            // 
-            this.textBoxSearchRevisorSalario.Location = new System.Drawing.Point(152, 89);
-            this.textBoxSearchRevisorSalario.Name = "textBoxSearchRevisorSalario";
-            this.textBoxSearchRevisorSalario.Size = new System.Drawing.Size(112, 20);
-            this.textBoxSearchRevisorSalario.TabIndex = 16;
+            this.buttonSearchRevisor.Location = new System.Drawing.Point(276, 77);
+            this.buttonSearchRevisor.Name = "buttonSearchRevisor";
+            this.buttonSearchRevisor.Size = new System.Drawing.Size(69, 23);
+            this.buttonSearchRevisor.TabIndex = 17;
+            this.buttonSearchRevisor.Text = "SEARCH";
+            this.buttonSearchRevisor.UseVisualStyleBackColor = true;
+            this.buttonSearchRevisor.Click += new System.EventHandler(this.loadRevisores);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 87);
+            this.label1.Location = new System.Drawing.Point(3, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 15;
@@ -378,6 +398,7 @@
             this.listBoxRevisores.Name = "listBoxRevisores";
             this.listBoxRevisores.Size = new System.Drawing.Size(338, 121);
             this.listBoxRevisores.TabIndex = 9;
+            this.listBoxRevisores.SelectedIndexChanged += new System.EventHandler(this.listBoxRevisores_SelectedIndexChanged);
             // 
             // textBoxSearchRevisorNome
             // 
@@ -522,7 +543,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.textBoxSearchCombTipo);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.buttonSearchComboio);
             this.panel3.Controls.Add(this.textBoxSearchCombID);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.listBoxComboios);
@@ -542,14 +563,15 @@
             this.textBoxSearchCombTipo.Size = new System.Drawing.Size(284, 20);
             this.textBoxSearchCombTipo.TabIndex = 13;
             // 
-            // button2
+            // buttonSearchComboio
             // 
-            this.button2.Location = new System.Drawing.Point(271, 88);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "SEARCH";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSearchComboio.Location = new System.Drawing.Point(271, 88);
+            this.buttonSearchComboio.Name = "buttonSearchComboio";
+            this.buttonSearchComboio.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchComboio.TabIndex = 12;
+            this.buttonSearchComboio.Text = "SEARCH";
+            this.buttonSearchComboio.UseVisualStyleBackColor = true;
+            this.buttonSearchComboio.Click += new System.EventHandler(this.loadComboios);
             // 
             // textBoxSearchCombID
             // 
@@ -575,6 +597,7 @@
             this.listBoxComboios.Name = "listBoxComboios";
             this.listBoxComboios.Size = new System.Drawing.Size(338, 95);
             this.listBoxComboios.TabIndex = 9;
+            this.listBoxComboios.SelectedIndexChanged += new System.EventHandler(this.listBoxComboios_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -668,9 +691,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox textBoxSearchRevisorCC;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxRevisorSalario;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBoxSearchRevisorSalario;
+        private System.Windows.Forms.Button buttonSearchRevisor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBoxRevisores;
         private System.Windows.Forms.TextBox textBoxSearchRevisorNome;
@@ -697,6 +718,10 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ToolStripMenuItem revisorToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonSearchComboio;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox textBoxSearchRevisorMin;
+        private System.Windows.Forms.TextBox textBoxSearchRevisorMax;
     }
 }

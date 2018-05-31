@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTypes\Bilhete.cs" />
+    <Compile Include="DataTypes\Cliente.cs" />
+    <Compile Include="DataTypes\Comboio.cs" />
+    <Compile Include="DataTypes\Connection.cs" />
+    <Compile Include="DataTypes\Fatura.cs" />
+    <Compile Include="DataTypes\Revisor.cs" />
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
