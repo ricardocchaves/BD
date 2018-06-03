@@ -55,8 +55,29 @@ namespace TrainsV2
                     }
                     catch (Exception)
                     {
+                        bool repeat = true;
                         MessageBox.Show("Não foi possível estabelecer ligação à base de dados local!");
-                        this.Close();
+                        while (repeat)
+                        {
+                            DialogResult dialogAnswer2 = MessageBox.Show("Não foi possível abrir a ligação! Gostaria de personalizar a ligação?", "Erro", MessageBoxButtons.YesNo);
+                            if (dialogAnswer2 == DialogResult.Yes)
+                            {
+                                try
+                                {
+                                    String connStr = Prompt.ShowDialog("Introduza a connectionString a usar.", "Connection String", "Data Source = tcp:193.136.175.33\\SQLSERVER2012,8293; Initial Catalog=P3G2; User ID=admin; Password=admin");
+                                    Connection.verifySGBDConnection(connStr);
+                                }
+                                catch (Exception)
+                                {
+                                    MessageBox.Show("Tente novamente");
+                                }
+                            }
+                            else
+                            {
+                                repeat = false;
+                                this.Close();
+                            }
+                        }
                     }
                     
                 }

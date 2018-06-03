@@ -22,6 +22,11 @@ namespace TrainsV2
                 String query = "exec addRevisor @cc = "+boxCC.Text+", @nome = "+boxNome.Text+
                     ", @apelido = "+boxApelido.Text+", @genero = "+ comboBoxGenero.SelectedItem.ToString() + ", @email = "+boxEmail.Text+
                     ", @telefone = "+boxTelefone.Text+", @salario ="+boxSalario.Text;
+                if (!Clean.IsClean(query))
+                {
+                    MessageBox.Show(Clean.Err());
+                    return;
+                }
                 SqlCommand cmd = new SqlCommand(query, Connection.get());
 
                 try

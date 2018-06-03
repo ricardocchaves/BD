@@ -23,7 +23,7 @@ namespace TrainsV2.DataTypes
                 "User ID=p3g2;" +
                 "Password=pousaegay;" +
                 "connect timeout = 3";
-            else
+            else if(connectionString.Equals("local"))
             {
                 connectionString = "Server=localhost;Trusted_Connection=true;Database=p3g2;connect timeout = 3";
             }

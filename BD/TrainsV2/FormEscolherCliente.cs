@@ -47,6 +47,11 @@ namespace TrainsV2
             if (boxNome.Length == 0)
             {
                 String query = "exec getCliente @nome=''";
+                if (!Clean.IsClean(query))
+                {
+                    MessageBox.Show(Clean.Err());
+                    return;
+                }
                 SqlCommand cmd = new SqlCommand(query, Connection.get());
                 SqlDataReader reader = cmd.ExecuteReader();
                 listBoxClientes.Items.Clear();
@@ -81,6 +86,11 @@ namespace TrainsV2
                     nome = boxNome;
                 }
                 String query = "exec getCliente @nome='"+nome+"', @apelido='"+apelido+"'";
+                if (!Clean.IsClean(query))
+                {
+                    MessageBox.Show(Clean.Err());
+                    return;
+                }
                 SqlCommand cmd = new SqlCommand(query, Connection.get());
                 SqlDataReader reader = cmd.ExecuteReader();
                 listBoxClientes.Items.Clear();
@@ -120,6 +130,12 @@ namespace TrainsV2
             String boxCC = textBoxSearchCcc.Text;
 
             String query = "exec getCliente @cc='"+boxCC+"'";
+            if (!Clean.IsClean(query))
+            {
+                MessageBox.Show(Clean.Err());
+                return;
+            }
+
             SqlCommand cmd = new SqlCommand(query, Connection.get());
             SqlDataReader reader = cmd.ExecuteReader();
             listBoxClientes.Items.Clear();

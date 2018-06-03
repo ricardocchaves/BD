@@ -23,6 +23,11 @@ namespace TrainsV2
                     ", @apelido = " + boxApelido.Text + ", @genero = " + comboGenero.SelectedItem.ToString() + 
                     ", @email = " + boxEmail.Text + ", @telefone = " + boxTel.Text + ", @nif = " + boxNIF.Text + 
                     ", @userId = " + boxUserID.Text + ", @password = " + boxPass1.Text + ",@cartao = " + boxCartaoCredito.Text;
+                if (!Clean.IsClean(query))
+                {
+                    MessageBox.Show(Clean.Err());
+                    return;
+                }
                 SqlCommand cmd = new SqlCommand(query, Connection.get());
 
                 try

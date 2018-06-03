@@ -84,6 +84,12 @@ namespace TrainsV2
             String query = "exec getRevisor @cc=" + boxCC+ ", @nome="+boxNome+", @apelido="+boxApelido+", " +
                 "@salario_min="+boxSalarioMin+", @salario_max="+boxSalarioMax;
 
+            if (!Clean.IsClean(query))
+            {
+                MessageBox.Show(Clean.Err());
+                return;
+            }
+
             SqlCommand cmd = new SqlCommand(query, Connection.get());
             SqlDataReader reader = cmd.ExecuteReader();
             listBoxRevisores.Items.Clear();
@@ -190,6 +196,11 @@ namespace TrainsV2
                 boxID = "null";
 
             String query = "exec getComboios @id="+boxID+", @tipo="+boxTipo+", @fabricante="+boxFabricante;
+            if (!Clean.IsClean(query))
+            {
+                MessageBox.Show(Clean.Err());
+                return;
+            }
 
             SqlCommand cmd = new SqlCommand(query, Connection.get());
             SqlDataReader reader = cmd.ExecuteReader();

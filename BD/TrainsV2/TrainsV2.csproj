@@ -47,10 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataTypes\Bilhete.cs" />
+    <Compile Include="DataTypes\Clean.cs" />
     <Compile Include="DataTypes\Cliente.cs" />
     <Compile Include="DataTypes\Comboio.cs" />
     <Compile Include="DataTypes\Connection.cs" />
     <Compile Include="DataTypes\Fatura.cs" />
+    <Compile Include="DataTypes\Horario.cs" />
+    <Compile Include="DataTypes\Prompt.cs" />
     <Compile Include="DataTypes\Revisor.cs" />
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
@@ -88,12 +91,6 @@
     <Compile Include="FormNovoRevisor.Designer.cs">
       <DependentUpon>FormNovoRevisor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSaldo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSaldo.Designer.cs">
-      <DependentUpon>FormSaldo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAdmin.resx">
@@ -113,9 +110,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNovoRevisor.resx">
       <DependentUpon>FormNovoRevisor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSaldo.resx">
-      <DependentUpon>FormSaldo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

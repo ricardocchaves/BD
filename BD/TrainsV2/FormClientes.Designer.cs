@@ -112,19 +112,11 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBoxInfoCapacidade = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.textBoxInfoCapCarruagem = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
             this.buttonComprarBilhete = new System.Windows.Forms.Button();
-            this.textBoxInfoCarruagens = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
             this.textBoxInfoLugar = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.textBoxInfoCarruagem = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBoxInfoPreco = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.textBoxInfoLinha = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBoxInfoChegadaHora = new System.Windows.Forms.TextBox();
@@ -137,6 +129,8 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.labelClienteEscolhido = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBoxInfoPreco = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -878,6 +872,7 @@
             this.buttonSearchHorarios.TabIndex = 16;
             this.buttonSearchHorarios.Text = "SEARCH";
             this.buttonSearchHorarios.UseVisualStyleBackColor = true;
+            this.buttonSearchHorarios.Click += new System.EventHandler(this.loadHorarios);
             // 
             // label16
             // 
@@ -929,6 +924,7 @@
             this.listBoxHorarios.Name = "listBoxHorarios";
             this.listBoxHorarios.Size = new System.Drawing.Size(338, 121);
             this.listBoxHorarios.TabIndex = 9;
+            this.listBoxHorarios.SelectedIndexChanged += new System.EventHandler(this.listBoxHorarios_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -962,13 +958,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBoxInfoCapacidade);
-            this.panel4.Controls.Add(this.label43);
-            this.panel4.Controls.Add(this.textBoxInfoCapCarruagem);
-            this.panel4.Controls.Add(this.label41);
             this.panel4.Controls.Add(this.buttonComprarBilhete);
-            this.panel4.Controls.Add(this.textBoxInfoCarruagens);
-            this.panel4.Controls.Add(this.label42);
             this.panel4.Controls.Add(this.textBoxInfoLugar);
             this.panel4.Controls.Add(this.label40);
             this.panel4.Controls.Add(this.textBoxInfoCarruagem);
@@ -991,40 +981,6 @@
             this.panel4.Size = new System.Drawing.Size(404, 223);
             this.panel4.TabIndex = 4;
             // 
-            // textBoxInfoCapacidade
-            // 
-            this.textBoxInfoCapacidade.Location = new System.Drawing.Point(329, 88);
-            this.textBoxInfoCapacidade.Name = "textBoxInfoCapacidade";
-            this.textBoxInfoCapacidade.ReadOnly = true;
-            this.textBoxInfoCapacidade.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoCapacidade.TabIndex = 38;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(265, 91);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(64, 13);
-            this.label43.TabIndex = 37;
-            this.label43.Text = "Capacidade";
-            // 
-            // textBoxInfoCapCarruagem
-            // 
-            this.textBoxInfoCapCarruagem.Location = new System.Drawing.Point(268, 117);
-            this.textBoxInfoCapCarruagem.Name = "textBoxInfoCapCarruagem";
-            this.textBoxInfoCapCarruagem.ReadOnly = true;
-            this.textBoxInfoCapCarruagem.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoCapCarruagem.TabIndex = 36;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(127, 120);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(135, 13);
-            this.label41.TabIndex = 35;
-            this.label41.Text = "Capacidade por carruagem";
-            // 
             // buttonComprarBilhete
             // 
             this.buttonComprarBilhete.Location = new System.Drawing.Point(288, 165);
@@ -1033,23 +989,7 @@
             this.buttonComprarBilhete.TabIndex = 28;
             this.buttonComprarBilhete.Text = "COMPRAR";
             this.buttonComprarBilhete.UseVisualStyleBackColor = true;
-            // 
-            // textBoxInfoCarruagens
-            // 
-            this.textBoxInfoCarruagens.Location = new System.Drawing.Point(191, 88);
-            this.textBoxInfoCarruagens.Name = "textBoxInfoCarruagens";
-            this.textBoxInfoCarruagens.ReadOnly = true;
-            this.textBoxInfoCarruagens.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoCarruagens.TabIndex = 34;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(127, 91);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(61, 13);
-            this.label42.TabIndex = 33;
-            this.label42.Text = "Carruagens";
+            this.buttonComprarBilhete.Click += new System.EventHandler(this.comprarBilhete);
             // 
             // textBoxInfoLugar
             // 
@@ -1082,23 +1022,6 @@
             this.label23.Size = new System.Drawing.Size(58, 13);
             this.label23.TabIndex = 29;
             this.label23.Text = "Carruagem";
-            // 
-            // textBoxInfoPreco
-            // 
-            this.textBoxInfoPreco.Location = new System.Drawing.Point(52, 117);
-            this.textBoxInfoPreco.Name = "textBoxInfoPreco";
-            this.textBoxInfoPreco.ReadOnly = true;
-            this.textBoxInfoPreco.Size = new System.Drawing.Size(68, 20);
-            this.textBoxInfoPreco.TabIndex = 27;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(4, 120);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(35, 13);
-            this.label22.TabIndex = 26;
-            this.label22.Text = "Preço";
             // 
             // textBoxInfoLinha
             // 
@@ -1204,6 +1127,23 @@
             this.labelClienteEscolhido.Size = new System.Drawing.Size(172, 24);
             this.labelClienteEscolhido.TabIndex = 7;
             this.labelClienteEscolhido.Text = "toString() de cliente";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(4, 120);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(35, 13);
+            this.label22.TabIndex = 26;
+            this.label22.Text = "Preço";
+            // 
+            // textBoxInfoPreco
+            // 
+            this.textBoxInfoPreco.Location = new System.Drawing.Point(52, 117);
+            this.textBoxInfoPreco.Name = "textBoxInfoPreco";
+            this.textBoxInfoPreco.ReadOnly = true;
+            this.textBoxInfoPreco.Size = new System.Drawing.Size(68, 20);
+            this.textBoxInfoPreco.TabIndex = 27;
             // 
             // FormClientes
             // 
@@ -1340,21 +1280,15 @@
         private System.Windows.Forms.TextBox textBoxInfoCarruagem;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button buttonComprarBilhete;
-        private System.Windows.Forms.TextBox textBoxInfoPreco;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBoxInfoLinha;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBoxInfoCapacidade;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox textBoxInfoCapCarruagem;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBoxInfoCarruagens;
-        private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox textBoxSearchFaturaMin;
         private System.Windows.Forms.Button buttonResetDate;
         private System.Windows.Forms.Button buttonResetDateBilhete;
+        private System.Windows.Forms.TextBox textBoxInfoPreco;
+        private System.Windows.Forms.Label label22;
     }
 }
 
